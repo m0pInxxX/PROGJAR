@@ -5,10 +5,8 @@ def client_program():
     host = 'localhost'
     port = 8000
 
-    # Membuat koneksi socket
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    # Membuat koneksi SSL
     ssl_context = ssl.create_default_context(ssl.Purpose.SERVER_AUTH)
     ssl_context.load_verify_locations("server.crt")
 
