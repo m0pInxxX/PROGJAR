@@ -1,0 +1,1 @@
+sock = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
