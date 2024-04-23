@@ -5,14 +5,12 @@ def server_program():
     host = 'localhost'
     port = 8000
 
-    # Membuat koneksi socket
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind((host, port))
     server_socket.listen(5)
 
     print("Server sedang menunggu koneksi...")
 
-    # Membuat konteks SSL
     ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
     ssl_context.load_cert_chain(certfile="server.crt", keyfile="server.key")
 
